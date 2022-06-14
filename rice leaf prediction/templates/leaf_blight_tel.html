@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+        <link rel="stylesheet" href="nicepage.css" media="screen">
+        <link rel="stylesheet" href="ecology-1.css" media="screen">
+        <link rel="stylesheet" href="{{ url_for('static', filename='nicepage.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='ecology-1.css') }}">
+        
+        <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/bttn.css/0.2.4/bttn.css">
+        <style>
+            .bg {
+    
+                background-image: url("images/background.jpeg");
+    
+                height: 100%;
+    
+                /* Center and scale the image nicely */
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+    
+            .file-upload input[type='file'] {
+                display: none;
+            }
+    
+            body {
+                background-color: #50C878;
+                /* background: -webkit-linear-gradient(to right, #66a776, #043610);
+                background: linear-gradient(to right, #5d9c6a, #059b0d); */
+                height: 100vh;
+            }
+    
+            .rounded-lg {
+                border-radius: 1rem;
+            }
+    
+            .custom-file-label.rounded-pill {
+                border-radius: 50rem;
+            }
+    
+            .custom-file-label.rounded-pill::after {
+                border-radius: 0 50rem 50rem 0;
+            }
+    
+            label {
+                background-color: #50C878;
+                color: white;
+                padding: 0.5rem;
+                font-family: sans-serif;
+                border-radius: 0.3rem;
+                cursor: pointer;
+                margin-top: 1rem;
+            }
+    
+            #file-chosen {
+                margin-left: 0.3rem;
+                font-family: sans-serif;
+            }
+    
+            .footer-basic {
+                padding: 40px 0;
+                background-color: #50C878;
+                color: #f1f3f5;
+            }
+    
+            .footer-basic ul {
+                padding: 0;
+                list-style: none;
+                text-align: center;
+                font-size: 18px;
+                line-height: 1.6;
+                margin-bottom: 0;
+            }
+    
+            .footer-basic li {
+                padding: 0 10px;
+            }
+    
+            .footer-basic ul a {
+                color: inherit;
+                text-decoration: none;
+                opacity: 0.8;
+            }
+    
+            .footer-basic ul a:hover {
+                opacity: 1;
+            }
+    
+            .footer-basic .social {
+                text-align: center;
+                padding-bottom: 25px;
+            }
+    
+            .footer-basic .social>a {
+                font-size: 24px;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                display: inline-block;
+                text-align: center;
+                border-radius: 50%;
+                border: 1px solid #ccc;
+                margin: 0 8px;
+                color: inherit;
+                opacity: 0.75;
+            }
+    
+            .footer-basic .social>a:hover {
+                opacity: 0.9;
+            }
+    
+            .footer-basic .copyright {
+                margin-top: 15px;
+                text-align: center;
+                font-size: 13px;
+                color: #aaa;
+                margin-bottom: 0;
+            }
+        </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bootstrap Dropdowns within a Navbar</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<div class="m-4">
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <div class="container-fluid">
+            <!-- <a href="#" class="navbar-brand">Brand</a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button> -->
+            <div id="navbarCollapse" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">ఇల్లు</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/analysis" class="nav-link">విశ్లేషణ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Translate</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Telugu</a>
+                            <a href="/leaf_blightt" class="dropdown-item">English</a>
+                            <a href="#" class="dropdown-item">Hindi</a>
+                            <a href="#" class="dropdown-item">Kannada</a>
+                            <a href="#" class="dropdown-item">Tamil</a>
+
+                            
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">పరిచయాలు</a>
+                    </li>
+                </ul>
+               
+            </div>
+        </div>
+    </nav> 
+    <div>
+        <div class="container">
+          <!-- For demo purpose -->
+          <div class="row mb-5 text-center text-white">
+            <div class="col-lg-10 mx-auto">
+              <h1 class="display-4" style="padding-top: 2%;font-weight: 400;color: rgb(4, 54, 4);""><b>Leaf Blight🍂</b></h1>
+            </div>
+          </div>
+          <center>
+          <div class=" col">
+                <div class="p-3 bg-white shadow rounded-lg" style="width: 30%;">
+      
+                  <img src="{{ url_for('static', filename = 'images/leaf_blight.jpg')}}" width="300" height="300">
+      
+                </div>
+            </div>
+            </center>
+            <br>
+            <div class=" row ">
+              <div class="col mx-auto">
+                <div class="p-5 bg-white shadow rounded-lg" style="height: 95%;">
+      
+                  <h5><b>
+                
+          
+                    సంక్షిప్త వివరణ:
+                      
+                    </b></h5>
+                  <p>
+                    వరిలో బాక్టీరియల్ ఆకు ముడత అనేది ఒక విధ్వంసక బాక్టీరియా వ్యాధి, దీనిని మొదట 1884-1885లో 
+                    జపాన్‌లో గమనించారు. ఇది మాగ్నాపోర్తే ఒరిజే అనే ఫంగల్ వ్యాధి. ప్రారంభ లక్షణాలు తెలుపు నుండి బూడిద-ఆకుపచ్చ
+                     మచ్చలు, దీర్ఘవృత్తాకార లేదా కుదురు ఆకారంలో ముదురు ఎరుపు నుండి గోధుమ రంగు అంచులతో ఉంటాయి.
+                      తీవ్రమైన అంటువ్యాధులలో, పంట నష్టం 75 శాతం వరకు ఉండవచ్చు మరియు సంవత్సరానికి మిలియన్ల హెక్టార్ల వరి సోకుతుంది.
+                     ఈ వ్యాధి మొలకలలో మరియు పరిపక్వ మొక్క దశలో గుర్తించబడుతుంది.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col mx-auto">
+                <div class="p-5 bg-white shadow rounded-lg" style="height:95%">
+                  <h5><b>
+                    ఈ క్రింది దశలను అనుసరించడం ద్వారా ఈ మొక్కల వ్యాధిని నివారించండి:
+                    
+                    </b></h5>
+                  <p>
+                   
+<ul>
+<li>నిరోధక రకాల వాడకం - అజయ, ఆశా, బిరాజ్, CO-43, గోవింద్, IR-64, జానకి, PR-4141, రాధ, సోనా మహసూరి, సుజాత, సూరజ్, స్వర్ణ, ఉదయ.</li>
+<li>నాటు సమయంలో మొక్కలను జాగ్రత్తగా నిర్వహించడం, నర్సరీలలో నిస్సారమైన నీటిని నిర్వహించడం, తీవ్రమైన వరదల సమయంలో మంచి డ్రైనేజీని అందించడం ద్వారా వ్యాధి వ్యాప్తిని తగ్గించండి.</li>
+    <li>పరిశుభ్రమైన సాగు మరియు బీడు పొలాలను ఎండబెట్టడం ద్వారా ఐనోక్యులమ్ మొత్తాన్ని తగ్గించండి.</li>
+        <li>బండ్‌లు మరియు ఛానెల్‌ల నుండి అనుషంగిక కలుపు హోస్ట్‌లను తొలగించండి.వ్యాధి లేని మొక్కలను మాత్రమే వాడండి.</li>
+            <li>అదనపు నత్రజనిని నివారించండి.</li>
+                <li>N ను మూడు స్ప్లిట్ డోస్‌లలో, 50% బేసల్, 25% టిల్లరింగ్ దశలో మరియు 25% N ని పానికల్ ఇనిషియేషన్ దశలో వర్తించండి.</li>
+</ul>
+                  </p>
+                </div>
+              </div>
+      
+        
+              <div class="col mx-auto">
+              <div class=" p-5 bg-white shadow rounded-lg" style="height: 95%;">
+                <center>
+                  <h5><b>
+        
+                    ఎరువులు:
+                      
+                    
+                    
+                    </b></h5>
+                  <br>
+                  <img src="{{ url_for('static', filename = 'images/pest1.jpg')}}"  width="300" height="300">
+                  <br>
+                  <br>
+                  <h6>
+                    టెర్రామైసిన్ 17, బ్రెస్టానాల్, అగ్రిమైసిన్ 500 మరియు అగ్రిమైసిన్ 100 ఫైటోలాన్ కలయిక</h6>
+      
+                  <a target="_blank" href={{buy_link}}><button type="button" class="btn btn-success"
+                      style="background-color: #05380b;">ఉత్పత్తి కొనుగోలు</button></a>
+                </center>
+              </div>
+            </div>
+          
+      
+          </div>
+        </div>
+      </div>   
+</div>
+</body>
+</html>
